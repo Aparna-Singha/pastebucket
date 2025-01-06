@@ -1,0 +1,17 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&display=swap');
+
+/* main */
+@import url("main.css");
+
+/* effects */
+@import url("effects/glass.css");
+
+/* components */
+@import url("components/dialog.css");
+@import url("components/snippet-list.css");
+@import url("components/action-bar.css");
+
+/* views */
+@import url("views/collection.css");
+
