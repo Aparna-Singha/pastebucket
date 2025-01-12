@@ -1,3 +1,14 @@
+function closeButtonTemplate() {
+    return `
+        <div
+            class="action-bar-item action"
+            onclick="unloadSnippet();"
+        >
+            <i class="fas fa-times"></i>
+        </div>
+    `;
+}
+
 function editButtonTemplate() {
     return `
         <div
