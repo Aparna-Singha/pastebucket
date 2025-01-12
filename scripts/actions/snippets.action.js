@@ -35,12 +35,15 @@ function loadSnippet(id) {
     $title.textContent = snippetData.title;
     $content.value = snippetData.content;
 
+    let $closeButton = document.createElement('button');
     let $editButton = document.createElement('button');
     let $deleteButton = document.createElement('button');
 
+    $actionBar.append($closeButton);
     $actionBar.append($editButton);
     $actionBar.append($deleteButton);
-
+    
+    $editButton.outerHTML = closeButtonTemplate();
     $editButton.outerHTML = editButtonTemplate();
     $deleteButton.outerHTML = deleteButtonTemplate();
 
