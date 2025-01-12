@@ -43,7 +43,7 @@ function loadSnippet(id) {
     $actionBar.append($editButton);
     $actionBar.append($deleteButton);
     
-    $editButton.outerHTML = closeButtonTemplate();
+    $closeButton.outerHTML = closeButtonTemplate();
     $editButton.outerHTML = editButtonTemplate();
     $deleteButton.outerHTML = deleteButtonTemplate();
 
