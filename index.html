@@ -1,130 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Data -->
-    <title>PasteBucket</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paste bucket</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Script Extensions -->
-    <script
-        src="https://kit.fontawesome.com/a63f2fde7e.js"
-        crossorigin="anonymous"
-    ></script>
-
-    <!-- Data -->
-    <script src="scripts/data/snippets.data.js"></script>
-
-    <!-- Components -->
-    <script src="scripts/components/snippet-buttons.components.js"></script>
-    <script src="scripts/components/snippet-list-item.components.js"></script>
-
-    <!-- Inputs -->
-    <script src="scripts/inputs/prompt.inputs.js"></script>
-
-    <!-- Actions -->
-    <script src="scripts/actions/snippets.action.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a63f2fde7e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="view" page="collection">
-            <div class="sidebar glass-bg">
-                <div class="action-bar">
-                    <div class="action-bar-left">
-                        <div class="action-bar-item subtitle">
-                            <span>PasteBucket</span>
-                        </div>
-                    </div>
-
-                    <div class="action-bar-right">
-                        <div
-                            class="action-bar-item action"
-                            onclick="newSnippet()"
-                        >
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
+    <div class="everything">
+        <div class="sidebar">
+            <div class="header">
+                <div class="title">PasteBucket</div>
+                <div class="action">
+                    <button id="add">
+                        <i class="fa-solid fa-plus" ></i>
+                    </button>
                 </div>
-
-                <div class="snippet-list"></div>
             </div>
+            <div class="list"></div>
 
-            <div class="snippet glass-bg">
-                <div class="action-bar">
-                    <div class="action-bar-left">
-                        <div class="action-bar-item title">
-                            <span id="snippet-title"></span>
-                        </div>
-                    </div>
-
-                    <div class="action-bar-right"></div>
-                </div>
-
-                <div class="snippet-code">
-                    <textarea
-                        class="glass-bg"
-                        id="snippet-code"
-                        disabled
-                    ></textarea>
-                </div>
+        </div>
+        <div class="main-container">
+            <div class="header"></div>
+            <div class="code-container">
+                <textarea class="code" disabled></textarea>
             </div>
         </div>
     </div>
-
-    <!-- User Inputs -->
-    <div class="user-inputs">
-        <div class="dialog">
-            <div class="dialog-container">
-                <div class="dialog-header">
-                    <div class="dialog-item">
-                        <span
-                            class="dialog-title"
-                            id="dialog-title"
-                        >
-                            Dialog Title
-                        </span>
-                    </div>
-
-                    <div
-                        class="dialog-item action"
-                        onclick="closeDialog()"
-                    >
-                        <i class="fas fa-times"></i>
-                    </div>
-                </div>
-
-                <div class="dialog-body">
-                    This is a dialog body
-                </div>
-                
-                <div class="dialog-footer">
-                    <div class="dialog-footer-left"></div>
-
-                    <div class="dialog-footer-right">
-                        <div
-                            class="dialog-item action"
-                            onclick="closeDialog()"
-                        >
-                            <i class="fas fa-times"></i>
-                        </div>
-
-                        <div
-                            class="dialog-item action"
-                            onclick="submitDialog()"
-                        >
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </body>
-
-<script>
-    // Load snippets
-    loadSnippets();
-</script>
-
 </html>
